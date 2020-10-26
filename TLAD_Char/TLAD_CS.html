@@ -14,7 +14,7 @@ input::-webkit-inner-spin-button {
       }
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; 
 }
  .row {
  display: flex;
@@ -35,11 +35,26 @@ input::-webkit-inner-spin-button {
  .pa-5l {
  padding-left: 5px;
  }
+ .pa-5r {
+ padding-right: 5px;
+ }
+ .pa-40r {
+   padding-right: 40px;
+ }
  .pa-10 {
    padding: 10px;
  }
  .pa-5b {
    padding-bottom: 5px;
+ }
+ .pa-5t {
+   padding-top: 5px;
+ }
+ .pa-10t {
+   padding-top: 10px;
+ }
+ .pa-15t {
+   padding-top: 15px;
  }
  .pa-20t {
    padding-top: 20px;
@@ -48,16 +63,35 @@ input::-webkit-inner-spin-button {
    display: flex;
    flex-direction: column;
  }
+ .z1 {
+   z-index: 1;
+ }
+.z-1 {
+  z-index: -1;
+}
  .wrap {
    flex-wrap: wrap;
  }
+ .flex {
+   display: flex;
+ }
  .flex-start {
+   display: flex;
    justify-content: flex-start;
    align-items: flex-start;
  }
  .flex-end {
+   display: flex;
    justify-content: flex-end;
    align-items: flex-end;
+ }
+ .aiflex-start {
+   display: flex;
+   align-items: flex-start;
+ }
+ .jcflex-end {
+   display: flex;
+   justify-content: flex-end;
  }
  label {
    padding-right: 5px;
@@ -89,6 +123,13 @@ input::-webkit-inner-spin-button {
     font-weight: bold;
     font-variant: small-caps;
   }
+  .traitfontd {
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-variant: small-caps;
+    color: rgb(200, 30, 30);
+  }
   .ctext {
     display: block;
     text-align: center;
@@ -102,7 +143,30 @@ input::-webkit-inner-spin-button {
   .wfont {
     text-align: left;
     font-weight: bold;
-
+  }
+  .assetsize {
+    width: 100%;
+    height: auto;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+  }
+  .assetsizet {
+    width: 95%;
+    height: auto;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+  }
+  .logosize {
+    width: 90%;
+    height: 90% auto;
+  }
+  .hpman {
+    width: 200px;
+    padding-top: 10px;
+    padding-left: 10px;
+    z-index: -1;
   }
   #charactername {
     width: 280px;
@@ -173,6 +237,14 @@ input::-webkit-inner-spin-button {
       -webkit-appearance: none;
     }
     #fighting {
+    }
+    #hpman {
+      position: relative;
+      left: 25px;
+    }
+    #gritbox {
+      position: relative;
+      left: 25px;
     }
     .sbox {
       width: 38px;
@@ -249,7 +321,7 @@ input::-webkit-inner-spin-button {
       align-content: center;
       font-family: Georgia, 'Times New Roman', Times, serif;
       font-size: 14px;
-      text-align: left;  
+      text-align: left; 
     }
     .wboxr {
       width: 50px;
@@ -312,7 +384,7 @@ input::-webkit-inner-spin-button {
       text-align: center;
     }
     .wboxwp {
-      width: 210px;
+      width: 215px;
       height: 20px;
       border-width: 0px;
       border-bottom-width: 1px;
@@ -321,23 +393,95 @@ input::-webkit-inner-spin-button {
       font-size: 12px;
       text-align: center;
     }
+    .wboxth {
+      width: 10px;
+      height: 20px;
+      margin: 1px;
+      border-width: 0px;
+      border-bottom-width: 1px;
+      align-content: center;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 12px;
+      text-align: center;
+    }
+    .posse {
+      width: 150px;
+      height: 20px;
+      border-width: 0px;
+      border-bottom-width: 1px;
+      align-content: center;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 12px;
+      text-align: center;
+      position: relative;
+    }
 
+    .tooltip {
+      position: relative;
+      display: inline-block;
+    }
+    .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      color: #111111;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+    }
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 250px;
+      background-color: #888888;
+      color: #fff;
+      text-align: left;
+      border-radius: 6px;
+      padding: 7px;
+      position: absolute;
+      z-index: 1;
+      top: 1px;
+      right: 105%;
+      margin-left: -60px;
+      opacity: 0;
+      transition: opacity .7s;
+    }
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      top: 5%;
+      left: 100%;
+      margin-top: 1px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent transparent#888888;
+    }
 </style>
+
+<!-- HTML Y'all -->
+
 </head>
 <html>
   <head>
     <title>To Live and Die in the West Character Sheet</title>
-    <script>
-
-    </script>
   </head>
+
   <body class="jc">
-    <h1>To Live and Die in the West</h1>
-    <div class="row jc pa-5">
+
+    <div class="row jc pa-5 pa-15t">
       <div><input id="charactername" placeholder="Name" type="text"></input></div>
       <div><input id="characterclass" placeholder="Class" type="text"></input></div>
     </div>
-  <div class="container jc wrap" style="padding-left: 160px;"> 
+  <div class="container jc wrap" style="padding-right: 45px;">
+
+    <div class="col acc pa-20t">
+      <div class="container hpman jc">
+        <img src="TLAD_LogoBlack.png" class="logosize"></img>
+      </div>
+    </div>
+
     <div class="col jc flex-end pa-10">
       <div class="row">
         <label for="Fame" class="traitfont">Fame</label><label class="bdf">(Bonus Die)</label>
@@ -364,7 +508,7 @@ input::-webkit-inner-spin-button {
         <input id="Movement" type="number" class="sbox1"></input><label for="Movement" class="traitfont">Movement</label>
       </div>
     </div>
-    <div class=col style="justify-content:flex-end; align-items:center; padding-bottom: 35px;">
+    <div class=col style="justify-content:flex-end; align-items:center; padding-bottom: 45px;">
       <label for="Ability Points" class="traitfont">Ability Points</label><input id=abilitypoints type="number"></input>
     </div>
   </div>
@@ -697,9 +841,9 @@ input::-webkit-inner-spin-button {
 <!-- Weapons -->
 
   <div class="container jc wrap flex">
-    <div class="col jc flex-end">
-      <div class="row pa-20t">
-        <div><label for="Weapons" class="traitfont" style="padding-right: 58px;">Weapons</label></div>
+    <div class="col jc" style="padding-bottom: 6px;">
+      <div class="col acc pa-20t">
+        <div style="padding-bottom: 5px;"><label for="Weapons" class="traitfont">Weapons</label></div>
       </div>
       <div class="row">
         <div><input class="wboxw" type="text"></input></div>
@@ -889,6 +1033,251 @@ input::-webkit-inner-spin-button {
       </div>
     </div>
 
+    <div class="col jc acc pa-5l" style="padding-bottom: 10px; width: 30px;">
+      <div class="col acc">
+        <div class="col" style="margin: 10px;"><label for="Two Hand?" id="two-hand" class="bdf">Two Hand</label></div>
+      </div>
+      <div class="row" style="">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+    </div>
+
+    <div class="col jc acc pa-5l" style="padding-bottom: 10px; width: 34px;">
+      <div class="col acc">
+        <div class="col" style="margin: 10px;"><label for="Accurate?" id="two-hand" class="bdf">Acc-urate</label></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+    </div>
   </div>
+
+<!-- Hit Points, Conditions, and Charts-->
+  <!-- Hit Points & Grit-->
+<div class="container jc flex">
+
+    <div class="flex col acc z-1">
+      <div class="hpman jc row" id="hpman">
+        <img src="Asset 9@2x.png" class="assetsize"></img>
+      </div>
+      <div class="row pa-5t z-1" id="gritbox">
+        <label for="Grit" class="traitfont">Grit</label>
+        <input id="grit" type="number" class="sbox"></input><div class="col"><input id="strength2" type="number" class="sbox2"></input><input id="strength5" type="number" class="sbox5"></input></div>
+      </div>
+    </div>
+  
+      <!-- Conditions Column 1 -->
+
+  <div class="flex col pa-5r">
+
+    <div class="flex row jc z1">
+      <span for="conditions" class="traitfont pa-10">Conditions</span>
+    </div>
+
+    <div class="flex row">
+      <div class="flex col wrap flex-end">
+      <div class="pa-5">
+        <div id="bleedingwound" class="tooltip flex-end">Bleeding Wound
+          <span class="tooltiptext">The wounded body part suffers 1 damage at the end of each turn.
+            Outside of combat, the character has up to five minutes to stave or stop the bleeding. If the 
+            bleeding is staved or stopped but the wound remains at 0 hit points and receives no additional 
+            hit points within the five minute period, the character falls unconscious for 1d4 hours.</span>
+            <input type="checkbox"></input>
+        </div>
+      </div>
+
+        <div class="pa-5">
+          <div id="broken-arm" class="tooltip flex-end">Broken Arm
+            <span class="tooltiptext">A fractured arm or leg cannot be used until it is repaired and fully 
+              healed (time determined by GM). A broken leg reduces your speed to 5', two broken legs
+              reduce your speed to 0.</span>
+              <input type="checkbox"></input>
+          </div>
+        </div>
+
+        <div class="pa-5">
+          <div id="deafened" class="tooltip flex-end">Deafened
+            <span class="tooltiptext">A deafened character automatically fails any hearingbased skill check 
+              and cannot use abilities that require hearing.</span>
+              <input type="checkbox"></input>
+          </div>
+        </div>
+
+        <div class="pa-5">
+          <div id="intoxicated" class="tooltip flex-end">Intoxicated
+            <span class="tooltiptext">Intoxicated characters have disadvantage on Fighting, Technical, and 
+              Social skill checks, but a -1 modifier to strength checks. A character becomes intoxicated by choice.</span>
+              <input type="checkbox"></input>
+          </div>
+        </div>
+
+        <div class="pa-5">
+          <div id="poisoned" class="tooltip flex-end">Poisoned
+            <span class="tooltiptext">A poisoned character loses 1 hit point per round from the afflicted area. 
+              When that area reaches 1 hit point, the poison stops affecting that area and spreads to the adjacent 
+              body part. For example, if your left leg is poisoned, the poison can only spread to the torso. A 
+              poisoned torso can spread to any body part (character’s choice).</span>
+              <input type="checkbox"></input>
+          </div>
+        </div>
+
+        <div class="pa-5">
+          <div id="suppressed" class="tooltip flex-end">Suppressed
+            <span class="tooltiptext">If you attempt to fire while suppressed, you gain a positive modifier to 
+              your attack roll, equal to the shots per round fired by all characters suppressing you. If you move, 
+              leave cover, roll a natural 20 while hip-firing, or a natural 17-20 while taking an aimed shot, there 
+              is a chance that you may be hit by one of the shots fired at you as part of the suppression action. 
+              Each character suppressing you makes a hip-fire attack, rolling to hit and consulting the hip-fire chart 
+              as normal. This attack counts as part of the suppression action previously taken and does not require 
+              a reaction or expend additional ammunition</span>
+              <input type="checkbox"></input>
+          </div>
+        </div>
+        
+        <div class="pa-5">
+          <div id="unconscious" class="tooltip flex-end">Unconscious
+            <span class="tooltiptext">An unconscious character cannot perform any actions or move. At the end 
+              of each turn in which you are unconscious, make a strength check. On a hard success, you regain 
+              consciousness. Another character can restore consciousness to you with a standard success on a 
+              medicine check.</span>
+              <input type="checkbox"></input>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditions Column 2 -->
+
+      <div class="flex col wrap flex-end">
+      <div class="pa-5">
+        <div id="blinded" class="tooltip flex-end">Blinded
+          <span class="tooltiptext">A blinded character automatically fails any skill checks or abilities that require 
+            sight. If a blinded character attempts to move, they must declare how many feet they wish to move. Roll 2d8 
+            and choose which roll to take. The number rolled indicates the direction that the character moves in, 
+            with a 1 being north, 2 being northeast, 3 being east, and so on, continuing clockwise. If the blinded 
+            character decides to hip fire, the GM decides where the shot lands. Melee attacks are at disadvantage.</span>
+            <input type="checkbox"></input>
+        </div>
+      </div>
+
+      <div class="pa-5">
+        <div id="broken-leg" class="tooltip flex-end">Broken Leg
+          <span class="tooltiptext">A fractured arm or leg cannot be used until it is repaired and fully 
+            healed (time determined by GM). A broken leg reduces your speed to 5', two broken legs
+            reduce your speed to 0.</span>
+            <input type="checkbox"></input>
+        </div>
+      </div>
+
+      <div class="pa-5">
+        <div id="diseased" class="tooltip flex-end">Diseased
+          <span class="tooltiptext">A diseased character cannot regain hit points from resting and loses 1 hit point 
+            in every body part each day. The disease clears after the second nights rest.</span>
+            <input type="checkbox"></input>
+        </div>
+      </div>
+
+      <div class="pa-5">
+        <div id="infected" class="tooltip flex-end">Infected
+          <span class="tooltiptext">An infected character cannot regain hit points from resting and instead the infected 
+            body part's maximum hit points is reduced by 1 each day. This continues each day until the infection has been 
+            cured. Once cured, your hit point maximum is restored. If the head or torso max hit points are reduced to 0 
+            by the infection, the character dies. If any limb max hit points are reduced to 0, you must amputate the limb.</span>
+            <input type="checkbox"></input>
+        </div>
+      </div>
+
+      <div class="pa-5">
+        <div id="panicked" class="tooltip flex-end">Panicked
+          <span class="tooltiptext">A panicked character must either retreat or fire from the hip at the closest enemy</span>
+            <input type="checkbox"></input>
+        </div>
+      </div>
+
+      <div class="pa-5">
+        <div id="restrained" class="tooltip flex-end">Restrained
+          <span class="tooltiptext">If you are restrained, your movement becomes 0 and all attacks against you have advantage.
+             The GM may allow attacks while restrained at disadvantage depending on the situation</span>
+            <input type="checkbox"></input>
+        </div>
+      </div>
+
+      <div class="pa-5">
+        <div id="system-shock" class="tooltip flex-end">System Shock
+          <span class="tooltiptext">When any limb drops to 0 hit points, or your head or torso drop to 0 from non-lethal damage, 
+            make a Grit check at the end of your turn. On a standard success, you gain 1 hit point in the affected limb and
+            system shock ends. If you fail the check or are hit for a second time, you fall unconscious (see the unconscious
+            condition). System shock can also be ended when another character achieves a standard success on a medicine
+            check to stabilize the wounded character. Raising the limb hit points above 0 before you fall unconscious
+            negates future checks</span>
+            <input type="checkbox"></input>
+        </div>
+      </div>
+
+      </div>
+    </div>
+
+      <!-- Death Saves -->
+
+    <div class="flex row jc pa-20t">
+      <span for="Death Saves" id="death-saves" class="traitfontd">Death Saves</span>
+      <div><input type="checkbox"></input><input type="checkbox"></input></div>
+    </div>
+  </div>
+
+      <!-- Hit Tables-->
+
+  <div class="flex container col pa-5">
+    <div class="row">
+      <img src="standardhittable.png" class="assetsizet">
+    </div>
+    <div class="row pa-5t">
+      <img src="accuratehittable.png" class="assetsizet">
+    </div>
+  </div>
+
+      <!--Hip fire & Posse Members-->
+      
+  <div class="flex container col pa-5">
+    <div class="row pa-40r">
+      <img src="shootingfromthehip.png" class="assetsizet">
+    </div>
+    <div class="row pa-5t" style="position: relative; right: 10px;">
+      <div class="col acc">
+        <span for="Posse Members" class="traitfont">Posse Members</span>
+        <input class="posse"><input class="posse"><input class="posse"><input class="posse"><input class="posse"><input class="posse">
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
