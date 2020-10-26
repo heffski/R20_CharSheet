@@ -12,6 +12,9 @@ input::-webkit-inner-spin-button {
       font-family: Georgia, 'Times New Roman', Times, serif;
       font-size: large;
       }
+.relative {
+  position: relative;
+}
 .container {
   display: flex;
   flex-direction: row; 
@@ -166,10 +169,10 @@ input::-webkit-inner-spin-button {
     width: 200px;
     padding-top: 10px;
     padding-left: 10px;
-    z-index: -1;
+
   }
   #charactername {
-    width: 280px;
+    width: 330px;
     height: 25px;
     margin-right: 4px;
     padding-right: 10px;
@@ -180,7 +183,7 @@ input::-webkit-inner-spin-button {
     font-size: medium;
   }
   #characterclass {
-    width: 280px;
+    width: 320px;
     height: 25px;
     margin-left: 4px;
     padding-left: 10px;
@@ -238,9 +241,80 @@ input::-webkit-inner-spin-button {
       position: relative;
       left: 25px;
     }
+    #headhp1 {
+      position: absolute;
+      right: 103px;
+      top: 52px;
+    }
+    #headhp2 {
+      position: absolute;
+      right: 73px;
+      top: 52px;
+    }
+    #larmhp1 {
+      position: absolute;
+      right: 175px;
+      top: 116px;
+    }
+    #larmhp2 {
+      position: absolute;
+      right: 147px;
+      top: 116px;
+    }
+    #thp1 {
+      position: absolute;
+      right: 105px;
+      top: 116px;
+    }
+    #thp2 {
+      position: absolute;
+      right: 73px;
+      top: 116px;
+    }
+    #rarmhp1 {
+      position: absolute;
+      right: 28px;
+      top: 116px;
+    }
+    #rarmhp2 {
+      position: absolute;
+      right: 0px;
+      top: 116px;
+    }
+    #lleghp1 {
+      position: absolute;
+      right: 148px;
+      top: 197px;
+    }
+    #lleghp2 {
+      position: absolute;
+      right: 122px;
+      top: 197px;
+    }
+    #rleghp1 {
+      position: absolute;
+      right: 58px;
+      top: 197px;
+    }
+    #rleghp2 {
+      position: absolute;
+      right: 30px;
+      top: 197px;
+    }
     #gritbox {
       position: relative;
       left: 25px;
+    }
+    .hpbox {
+      width: 18px;
+      height: 20px;
+      border-width: 0px;
+      border-bottom-width: 0px;
+      align-content: center;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 15px;
+      text-align: center;
+      background: transparent;
     }
     .sbox {
       width: 38px;
@@ -251,7 +325,7 @@ input::-webkit-inner-spin-button {
       border-right-style: none;
       align-content: center;
       font-family: Georgia, 'Times New Roman', Times, serif;
-      font-size: medium;
+      font-size: 20px;
       text-align: center;  
     }
     .sbox2 {
@@ -411,7 +485,6 @@ input::-webkit-inner-spin-button {
       text-align: center;
       position: relative;
     }
-
     .tooltip {
       position: relative;
       display: inline-block;
@@ -526,7 +599,7 @@ input::-webkit-inner-spin-button {
             <input type="checkbox"></input><input type="checkbox"></input><input type="checkbox"></input>
           </div>
         </div>
-        <input id="blades" type="number" class="sbox"></input><div class="col"><input id="blades2" type="number" class="sbox2"></input><input id="blades5" type="number" class="sbox5"></input></div>
+        <input id="blades" type="number" class="sbox"  placeholder="1"></input><div class="col"><input id="blades2" type="number" class="sbox2" placeholder="1/2"></input><input id="blades5" type="number" class="sbox5" placeholder="1/5"></input></div>
       </div>
       <div class="row">
         <div class="col flex-end">
@@ -842,7 +915,7 @@ input::-webkit-inner-spin-button {
         <div style="padding-bottom: 5px;"><label for="Weapons" class="traitfont">Weapons</label></div>
       </div>
       <div class="row">
-        <div><input class="wboxw" type="text"></input></div>
+        <div><input class="wboxw" type="text"  placeholder="Fists"></input></div>
       </div>
       <div class="row">
         <div><input class="wboxw" type="text"></input></div>
@@ -866,7 +939,7 @@ input::-webkit-inner-spin-button {
         <div><label for="Range" class="wfont">Range</label></div>
       </div>
       <div class="row">
-        <div><input class="wboxr" type="text"></input></div>
+        <div><input class="wboxr" type="text"  placeholder="3'"></input></div>
       </div>
       <div class="row">
         <div><input class="wboxr" type="text"></input></div>
@@ -890,7 +963,7 @@ input::-webkit-inner-spin-button {
         <div><label for="Damage" class="wfont">Damage</label></div>
       </div>
       <div class="row">
-        <div><input class="wboxd" type="text"></input></div>
+        <div><input class="wboxd" type="text"  placeholder="1D4"></input></div>
       </div>
       <div class="row">
         <div><input class="wboxd" type="text"></input></div>
@@ -914,7 +987,7 @@ input::-webkit-inner-spin-button {
         <div><label for="Attacks" class="wfont">Attacks</label></div>
       </div>
       <div class="row">
-        <div><input class="wboxa" type="text"></input></div>
+        <div><input class="wboxa" type="text"  placeholder="2"></input></div>
       </div>
       <div class="row">
         <div><input class="wboxa" type="text"></input></div>
@@ -1079,16 +1152,30 @@ input::-webkit-inner-spin-button {
   </div>
 
 <!-- Hit Points, Conditions, and Charts-->
+
   <!-- Hit Points & Grit-->
 <div class="container jc flex">
 
-    <div class="flex col acc z-1">
+    <div class="flex col acc">
       <div class="hpman jc row" id="hpman">
         <img src="Asset 9@2x.png" class="assetsize"></img>
+        <div class="relative"><input id="headhp2" class="hpbox" type="number" placeholder="1"></input></div>
+        <div class="relative"><input id="headhp1" class="hpbox" type="number" placeholder="1"></input></div>
+        <div class="relative"><input id="larmhp1" class="hpbox" type="number" placeholder="1"></input></div>
+        <div class="relative"><input id="larmhp2" class="hpbox" type="number" placeholder="1"></input></div>
+        <div class="relative"><input id="rarmhp1" class="hpbox" type="number" placeholder="1"></input></div>
+        <div class="relative"><input id="rarmhp2" class="hpbox" type="number" placeholder="1"></input></div>
+        <div class="relative"><input id="thp1" class="hpbox" type="number" placeholder="1"></input></div>
+        <div class="relative"><input id="thp2" class="hpbox" type="number" placeholder="1"></input></div>
+        <div class="relative"><input id="lleghp1" class="hpbox" type="number" placeholder="1"></input></div>
+        <div class="relative"><input id="lleghp2" class="hpbox" type="number" placeholder="1"></input></div>
+        <div class="relative"><input id="rleghp1" class="hpbox" type="number" placeholder="1"></input></div>
+        <div class="relative"><input id="rleghp2" class="hpbox" type="number" placeholder="1"></input></div>
+
       </div>
       <div class="row pa-5t z-1" id="gritbox">
         <label for="Grit" class="traitfont">Grit</label>
-        <input id="grit" type="number" class="sbox"></input><div class="col"><input id="strength2" type="number" class="sbox2"></input><input id="strength5" type="number" class="sbox5"></input></div>
+        <input id="grit" type="number" class="sbox"  placeholder="10"></input><div class="col"><input id="strength2" type="number" class="sbox2"  placeholder="5"></input><input id="strength5" type="number" class="sbox5"  placeholder="2"></input></div>
       </div>
     </div>
   
@@ -1171,7 +1258,7 @@ input::-webkit-inner-spin-button {
         </div>
       </div>
 
-      <!-- Conditions Column 2 -->
+ <!-- Conditions Column 2 -->
 
       <div class="flex col wrap flex-end">
       <div class="pa-5">
