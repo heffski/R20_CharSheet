@@ -1,0 +1,1029 @@
+<head>
+    <title>To Live and Die in the West Character Sheet</title>
+    <link rel="stylesheet" href="TLAD.css">
+</head>
+
+  <div class="jc">
+
+    <div class="row jc pa-5 pa-15t">
+      <div><input id="charactername"  name="attr_charactername" placeholder="Name" type="text"></input></div>
+      <div><input id="characterclass" name="attr_characterclass" placeholder="Class" type="text"></input></div>
+    </div>
+  <div class="container jc wrap" style="padding-right: 45px;">
+
+    <div class="col acc pa-20t">
+      <div class="container hpman jc">
+        <img src="./images/TLAD_LogoBlack.png" class="logosize"></img>
+      </div>
+    </div>
+
+    <div class="col jc flex-end pa-10">
+      <div class="row">
+        <label for="fame" class="traitfont">Fame</label><label class="bdf">(Bonus Die)</label>
+        <input id="fame" name="attr_fame" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="fame2" name="attr_fame2" type="number" class="sboxd"></input>
+        </div>
+      </div>
+      <div class="row">
+        <label for="ftrength" class="traitfont">Strength</label>
+        <input id="strength" name="attr_strength" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="strength2" name="attr_strength2" type="number" class="sbox2"></input>
+          <input id="strength5" name="attr_strength5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <label for="initiative" class="traitfont">Initiative</label>
+        <input id="initiative" name="attr_initiative" type="number" class="sbox1"></input>
+      </div>
+    </div>
+    <div class="col jc flex start pa-10">
+      <div class="row">
+        <input id="infamy" name="attr_infamy" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="infamy2" name="attr_infamy" type="number" class="sboxd"></input>
+        </div>
+        <label for="infamy" class="traitfont">Infamy</label>
+        <label class="bdf">(Bonus Die)</label>
+      </div>
+      <div class="row">
+        <input id="observation" name="attr_observation" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="observation2" name="attr_observation2" type="number" class="sbox2"></input>
+          <input id="observation5" type="number" class="sbox5"></input>
+        </div>
+        <label for="observation" class="traitfont">Observation</label>
+      </div>
+      <div class="row">
+        <input id="movement" name="attr_movement" type="number" class="sbox1"></input>
+        <label for="Movement" class="traitfont">Movement</label>
+      </div>
+    </div>
+    <div class=col style="justify-content:flex-end; align-items:center; padding-bottom: 45px;">
+      <label for="abilitypoints" class="traitfont">Ability Points</label>
+      <input id="abilitypoints" name="attr_abilitypoints" type="number"></input>
+    </div>
+  </div>
+
+<!--The Skills section begins here, will have to fiugre out how to divide by 1/2 and 5th's using java script-->
+
+  <div class="container jc wrap flex" style="padding-right: 20px;">
+
+        <!-- Fighting Skills Column -->
+
+    <div class="col jc flex-end" style="padding-right: 5px;">
+      <div class="col acc pa-5b">
+        <label for="fighting" class="traitfont">Fighting</label><input id="fighting" name="attr_fighting" type="number" class="traits"></input>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="blades">Blades</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="blades" name="attr_blades" type="number" class="sbox"></input>
+          <div class="col">
+             <input id="blades2" name="attr_blades2" type="number" class="sbox2"></input>
+             <input id="blades5" name="attr_blades5" type="number" class="sbox5"></input>
+          </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="Bludgeoning">Bludgeoning</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="bludgeoning" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="bludgeoning2" name="attr_bludgeoning2" type="number" class="sbox2"></input>
+          <input id="bludgeoning5" name="attr_bludgeoning5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end"> 
+          <label for="bows">Bows</label>
+          <div class="row" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="bows" name="attr_bows" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="bows2" name="attr_bows2" type="number" class="sbox2"></input>
+          <input id="bows5" name="attr_bows5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="brawling">Brawling</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="brawling" name="attr_brawling" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="brawling2" name="attr_brawling2" type="number" class="sbox2"></input>
+          <input id="brawling5" name="attr_brawling5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="pistols">Pistols</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="pistols" name="attr_pistols" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="pistols2" name="attr_pistols2" type="number" class="sbox2"></input>
+          <input id="pistols5" name="attr_pistols5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end"> 
+          <label for="rifles">Rifles</label>
+          <div class="row" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="rifles" name="attr_rifles" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="rifles2" name="attr_rifles2" type="number" class="sbox2"></input>
+          <input id="rifles5" name="attr_rifles5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="shotguns">Shotguns</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="shotguns" name="attr_shotguns" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="shotguns2" name="attr_shotguns2" type="number" class="sbox2"></input>
+          <input id="shotguns5" name="attr_shotguns5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="thrown">Thrown</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="thrown" name="attr_thrown" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="thrown2" name="attr_thrown2" type="number" class="sbox2"></input>
+          <input id="thrown5" name="attr_thrown5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social Skills Column -->
+
+    <div class="col jc flex-end" style="padding-right: 5px;">
+      <div class="col acc pa-5b">
+        <label for="social" class="traitfont">Social</label>
+        <input id="social" name="attr_social" type="number" class="traits"></input>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="bartering">Bartering</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="bartering" name="attr_bartering" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="bartering2" name="attr_bartering2" type="number" class="sbox2"></input>
+          <input id="bartering5" name="attr_bartering5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="bullying">Bullying</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="bullying" name="attr_bullying" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="bullying2" name="attr_bullying2" type="number" class="sbox2"></input>
+          <input id="bullying5" name="attr_bullying5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end"> 
+          <label for="charm">Charm</label>
+          <div class="row" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="charm" name="attr_charm" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="charm2" name="attr_charm2"  type="number" class="sbox2"></input>
+          <input id="charm5" name="attr_charm5"  type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="distraction">Distraction</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="distraction" name="attr_distraction"  type="number" class="sbox"></input>
+        <div class="col">
+          <input id="distraction2" name="attr_distraction2"  type="number" class="sbox2"></input>
+          <input id="distraction5" name="attr_distraction5"  type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="intuition">Intuition</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input><input type="checkbox"></input><input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="intuition" name="attr_intuition"  type="number" class="sbox"></input>
+        <div class="col">
+          <input id="intuition2" name="attr_intuition2" type="number" class="sbox2"></input>
+          <input id="intuition5" name="attr_intuition5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end"> 
+          <label for="lying">Lying</label>
+          <div class="row" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="lying" name="attr_lying" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="lying2" name="attr_lying2" type="number" class="sbox2"></input>
+          <input id="lying5" name="attr_lying5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="performance">Performance</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="performance" name="attr_performance" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="performance2" name="attr_performance2" type="number" class="sbox2"></input>
+          <input id="performance5" name="attr_performance5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="persuasion">Persuasion</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="persuasion" name="attr_persuasion" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="persuasion2" name="attr_persuasion2"  type="number" class="sbox2"></input>
+          <input id="persuasion5" name="attr_persuasion5"  type="number" class="sbox5"></input>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical Skills Column -->
+
+    <div class="col jc flex-end" style="padding-right: 5px;">
+      <div class="col acc pa-5b">
+        <label for="Technical" class="traitfont">Technical</label><input id="technical" type="number" class="traits"></input>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="alchemy">Alchemy</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="alchemy" name="attr_alchemy" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="alchemy2" name="attr_alchemy2" type="number" class="sbox2"></input>
+          <input id="alchemy5" name="attr_alchemy5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="cheating">Cheating</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="cheating" name="attr_cheating" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="cheating2" name="attr_cheating2" type="number" class="sbox2"></input>
+          <input id="cheating5" name="attr_cheating5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end"> 
+          <label for="engingeering">Engingeering</label>
+          <div class="row" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="engingeering" name="attr_engineering" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="engingeering2" name="attr_engingeering2" type="number" class="sbox2"></input>
+          <input id="engingeering5" name="attr_engingeering5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="explosives">Explosives</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="explosives" name="attr_explosives" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="explosives2" name="attr_explosives2" type="number" class="sbox2"></input>
+          <input id="explosives5" name="attr_explosives5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="medicine">Medicine</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="medicine" name="attr_medicine" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="medicine2" name="attr_medicine2" type="number" class="sbox2"></input>
+          <input id="medicine5" name="attr_medicine5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end"> 
+          <label for="research">Research</label>
+          <div class="row" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="research" name="attr_research" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="research2" name="attr_research2" type="number" class="sbox2"></input>
+          <input id="research5" name="attr_research5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="ropes">Ropes</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="ropes" name="attr_ropes" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="ropes2" name="atrr_ropes2" type="number" class="sbox2"></input>
+          <input id="ropes5" name="atrr_ropes5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="tinkering">Tinkering</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="tinkering" name="attr_tinkering" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="tinkering2" name="attr_tinkering2" type="number" class="sbox2"></input>
+          <input id="tinkering5" name="attr_tinkering5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+    </div>
+
+    <!-- Survival Skills Column -->
+
+    <div class="col jc flex-end">
+      <div class="col acc pa-5b">
+        <label for="survival" class="traitfont">Survival</label>
+        <input id="Survival" name="attr_survival" type="number" class="traits"></input>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="animalhandling">Animal Handling</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="animalhandling" name="attr_animalhandling" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="animalhandling2" name="attr_animalhandling2" type="number" class="sbox2"></input>
+          <input id="animalhandling5" name="attr_animalhandling5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="herbalism">Herbalism</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="herbalism" name="attr_herbalism" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="herbalism2" name="attr_herbalism2" type="number" class="sbox2"></input>
+          <input id="herbalism5" name="attr_herbalism5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end"> 
+          <label for="navigation">Navigation</label>
+          <div class="row" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="navigation" name="attr_navigation" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="navigation2" name="attr_navigation2" type="number" class="sbox2"></input>
+          <input id="navigation5" name="attr_navigation5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="riding">Riding</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="riding" name="attr_riding" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="riding2" name="attr_riding2" type="number" class="sbox2"></input>
+          <input id="riding5" name="attr_riding5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="scavenging">Scavenging</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="scavenging" name="attr_scavenging" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="scavenging2" name="attr_scavenging2" type="number" class="sbox2"></input>
+          <input id="scavenging5" name="attr_scavenging5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end"> 
+          <label for="shelter">Shelter</label>
+          <div class="row" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="shelter" name="attr_shelter" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="shelter2" name="attr_shelter2" type="number" class="sbox2"></input>
+          <input id="shelter5" name="attr_shelter5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="stealth">Stealth</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="stealth" type="number" name="attr_stealth" class="sbox"></input>
+        <div class="col">
+          <input id="stealth2" name="attr_stealth2" type="number" class="sbox2"></input>
+          <input id="stealth5" name="attr_stealth5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col flex-end">
+          <div><label for="tracking">Tracking</label></div>
+          <div class="row flex-end" style="margin: -2px; margin-right: 3px;">
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+            <input type="checkbox"></input>
+          </div>
+        </div>
+        <input id="tracking" name="attr_tracking" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="tracking2" name="attr_tracking2" type="number" class="sbox2"></input>
+          <input id="tracking5" name="attr_tracking5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Weapons -->
+
+  <div class="container jc wrap flex">
+    <div class="col jc" style="padding-bottom: 6px;">
+      <div class="col acc pa-20t">
+        <div style="padding-bottom: 5px;"><label for="Weapons" class="traitfont">Weapons</label></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxw" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxw" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxw" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxw" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxw" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxw" type="text"></input></div>
+      </div>
+    </div>
+
+    <div class="col jc acc pa-5l">
+      <div class="col acc pa-20t">
+        <div><label for="Range" class="wfont">Range</label></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxr" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxr" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxr" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxr" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxr" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxr" type="text"></input></div>
+      </div>
+    </div>
+
+    <div class="col jc acc pa-5l">
+      <div class="col acc pa-20t">
+        <div><label for="Damage" class="wfont">Damage</label></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxd" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxd" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxd" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxd" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxd" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxd" type="text"></input></div>
+      </div>
+    </div>
+
+    <div class="col jc acc">
+      <div class="col acc pa-20t">
+        <div><label for="Attacks" class="wfont">Attacks</label></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxa" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxa" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxa" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxa" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxa" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxa" type="text"></input></div>
+      </div>
+    </div>
+
+    <div class="col jc acc">
+      <div class="col acc pa-20t">
+        <div><label for="Capacity" class="wfont">Capacity</label></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxc" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxc" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxc" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxc" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxc" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxc" type="text"></input></div>
+      </div>
+    </div>
+
+    <div class="col jc acc">
+      <div class="col acc pa-20t">
+        <div><label for="Ammo" class="wfont">Ammo</label></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxam" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxam" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxam" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxam" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxam" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxam" type="text"></input></div>
+      </div>
+    </div>
+
+    <div class="col jc acc">
+      <div class="col acc pa-20t">
+        <div><label for="Misfire" class="wfont">Misfire</label></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxm" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxm" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxm" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxm" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxm" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxm" type="text"></input></div>
+      </div>
+    </div>
+
+    <div class="col jc acc pa-5l">
+      <div class="col acc pa-20t">
+        <div><label for="Weapon Properties" class="wfont">Weapon Properties</label></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxwp" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxwp" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxwp" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxwp" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxwp" type="text"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxwp" type="text"></input></div>
+      </div>
+    </div>
+
+    <div class="col jc acc pa-5l" style="padding-bottom: 10px; width: 30px;">
+      <div class="col acc">
+        <div class="col" style="margin: 10px;"><label for="Two Hand?" id="two-hand" class="bdf">Two Hand</label></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+    </div>
+
+    <div class="col jc acc pa-5l" style="padding-bottom: 10px; width: 34px;">
+      <div class="col acc">
+        <div class="col" style="margin: 10px;"><label for="Accurate?" id="two-hand" class="bdf">Acc-urate</label></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+      <div class="row">
+        <div><input class="wboxth" type="checkbox"></input></div>
+      </div>
+    </div>
+  </div>
+
+<!-- Hit Points, Conditions, and Charts-->
+  <!-- Hit Points & Grit-->
+<div class="container jc flex">
+
+    <div class="flex col acc z-1">
+      <div class="hpman jc row" id="hpman">
+        <img src="./images/hitman.png" class="assetsize"></img>
+      </div>
+      <div class="row pa-5t z-1" id="gritbox">
+        <label for="Grit" class="traitfont">Grit</label>
+        <input id="grit" name="attr_grit" type="number" class="sbox"></input>
+        <div class="col">
+          <input id="grit2" name="attr_grit2" type="number" class="sbox2"></input>
+          <input id="grit5" name="attr_grit5" type="number" class="sbox5"></input>
+        </div>
+      </div>
+    </div>
+  
+      <!-- Conditions Column 1 -->
+
+  <div class="flex col pa-5r">
+
+    <div class="flex row jc z1">
+      <span for="conditions" class="traitfont pa-10">Conditions</span>
+    </div>
+
+    <div class="flex row">
+      <div class="flex col wrap flex-end">
+      <div class="pa-5">
+        <div id="bleedingwound" class="tooltip flex-end">Bleeding Wound
+          <span class="tooltiptext">The wounded body part suffers 1 damage at the end of each turn.
+            Outside of combat, the character has up to five minutes to stave or stop the bleeding. If the 
+            bleeding is staved or stopped but the wound remains at 0 hit points and receives no additional 
+            hit points within the five minute period, the character falls unconscious for 1d4 hours.</span>
+            <input type="checkbox"></input>
+        </div>
+      </div>
+
+        <div class="pa-5">
+          <div id="broken-arm" class="tooltip flex-end">Broken Arm
+            <span class="tooltiptext">A fractured arm or leg cannot be used until it is repaired and fully 
+              healed (time determined by GM). A broken leg reduces your speed to 5', two broken legs
+              reduce your speed to 0.</span>
+              <input type="checkbox"></input>
+          </div>
+        </div>
+
+        <div class="pa-5">
+          <div id="deafened" class="tooltip flex-end">Deafened
+            <span class="tooltiptext">A deafened character automatically fails any hearingbased skill check 
+              and cannot use abilities that require hearing.</span>
+              <input type="checkbox"></input>
+          </div>
+        </div>
+
+        <div class="pa-5">
+          <div id="intoxicated" class="tooltip flex-end">Intoxicated
+            <span class="tooltiptext">Intoxicated characters have disadvantage on Fighting, Technical, and 
+              Social skill checks, but a -1 modifier to strength checks. A character becomes intoxicated by choice.</span>
+              <input type="checkbox"></input>
+          </div>
+        </div>
+
+        <div class="pa-5">
+          <div id="poisoned" class="tooltip flex-end">Poisoned
+            <span class="tooltiptext">A poisoned character loses 1 hit point per round from the afflicted area. 
+              When that area reaches 1 hit point, the poison stops affecting that area and spreads to the adjacent 
+              body part. For example, if your left leg is poisoned, the poison can only spread to the torso. A 
+              poisoned torso can spread to any body part (character’s choice).</span>
+              <input type="checkbox"></input>
+          </div>
+        </div>
+
+        <div class="pa-5">
+          <div id="suppressed" class="tooltip flex-end">Suppressed
+            <span class="tooltiptext">If you attempt to fire while suppressed, you gain a positive modifier to 
+              your attack roll, equal to the shots per round fired by all characters suppressing you. If you move, 
+              leave cover, roll a natural 20 while hip-firing, or a natural 17-20 while taking an aimed shot, there 
+              is a chance that you may be hit by one of the shots fired at you as part of the suppression action. 
+              Each character suppressing you makes a hip-fire attack, rolling to hit and consulting the hip-fire chart 
+              as normal. This attack counts as part of the suppression action previously taken and does not require 
+              a reaction or expend additional ammunition</span>
+              <input type="checkbox"></input>
+          </div>
+        </div>
+        
+        <div class="pa-5">
+          <div id="unconscious" class="tooltip flex-end">Unconscious
+            <span class="tooltiptext">An unconscious character cannot perform any actions or move. At the end 
+              of each turn in which you are unconscious, make a strength check. On a hard success, you regain 
+              consciousness. Another character can restore consciousness to you with a standard success on a 
+              medicine check.</span>
+              <input type="checkbox"></input>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditions Column 2 -->
+
+      <div class="flex col wrap flex-end">
+      <div class="pa-5">
+        <div id="blinded" class="tooltip flex-end">Blinded
+          <span class="tooltiptext">A blinded character automatically fails any skill checks or abilities that require 
+            sight. If a blinded character attempts to move, they must declare how many feet they wish to move. Roll 2d8 
+            and choose which roll to take. The number rolled indicates the direction that the character moves in, 
+            with a 1 being north, 2 being northeast, 3 being east, and so on, continuing clockwise. If the blinded 
+            character decides to hip fire, the GM decides where the shot lands. Melee attacks are at disadvantage.</span>
+            <input type="checkbox"></input>
+        </div>
+      </div>
+
+      <div class="pa-5">
+        <div id="broken-leg" class="tooltip flex-end">Broken Leg
+          <span class="tooltiptext">A fractured arm or leg cannot be used until it is repaired and fully 
+            healed (time determined by GM). A broken leg reduces your speed to 5', two broken legs
+            reduce your speed to 0.</span>
+            <input type="checkbox"></input>
+        </div>
+      </div>
+
+      <div class="pa-5">
+        <div id="diseased" class="tooltip flex-end">Diseased
+          <span class="tooltiptext">A diseased character cannot regain hit points from resting and loses 1 hit point 
+            in every body part each day. The disease clears after the second nights rest.</span>
+            <input type="checkbox"></input>
+        </div>
+      </div>
+
+      <div class="pa-5">
+        <div id="infected" class="tooltip flex-end">Infected
+          <span class="tooltiptext">An infected character cannot regain hit points from resting and instead the infected 
+            body part's maximum hit points is reduced by 1 each day. This continues each day until the infection has been 
+            cured. Once cured, your hit point maximum is restored. If the head or torso max hit points are reduced to 0 
+            by the infection, the character dies. If any limb max hit points are reduced to 0, you must amputate the limb.</span>
+            <input type="checkbox"></input>
+        </div>
+      </div>
+
+      <div class="pa-5">
+        <div id="panicked" class="tooltip flex-end">Panicked
+          <span class="tooltiptext">A panicked character must either retreat or fire from the hip at the closest enemy</span>
+            <input type="checkbox"></input>
+        </div>
+      </div>
+
+      <div class="pa-5">
+        <div id="restrained" class="tooltip flex-end">Restrained
+          <span class="tooltiptext">If you are restrained, your movement becomes 0 and all attacks against you have advantage.
+             The GM may allow attacks while restrained at disadvantage depending on the situation</span>
+            <input type="checkbox"></input>
+        </div>
+      </div>
+
+      <div class="pa-5">
+        <div id="system-shock" class="tooltip flex-end">System Shock
+          <span class="tooltiptext">When any limb drops to 0 hit points, or your head or torso drop to 0 from non-lethal damage, 
+            make a Grit check at the end of your turn. On a standard success, you gain 1 hit point in the affected limb and
+            system shock ends. If you fail the check or are hit for a second time, you fall unconscious (see the unconscious
+            condition). System shock can also be ended when another character achieves a standard success on a medicine
+            check to stabilize the wounded character. Raising the limb hit points above 0 before you fall unconscious
+            negates future checks</span>
+            <input type="checkbox"></input>
+        </div>
+      </div>
+
+      </div>
+    </div>
+
+      <!-- Death Saves -->
+
+    <div class="flex row jc pa-20t">
+      <span for="Death Saves" id="death-saves" class="traitfontd">Death Saves</span>
+      <div><input type="checkbox"></input><input type="checkbox"></input></div>
+    </div>
+  </div>
+
+      <!-- Hit Tables-->
+
+  <div class="flex container col pa-5">
+    <div class="row">
+      <img src="./images/standardhittable.png" class="assetsizet">
+    </div>
+    <div class="row pa-5t">
+      <img src="./images/accuratehittable.png" class="assetsizet">
+    </div>
+  </div>
+
+      <!--Hip fire & Posse Members-->
+      
+  <div class="flex container col pa-5">
+    <div class="row pa-40r">
+      <img src="./images/shootingfromthehip.png" class="assetsizet">
+    </div>
+    <div class="row pa-5t" style="position: relative; right: 10px;">
+      <div class="col acc">
+        <span for="Posse Members" class="traitfont">Posse Members</span>
+        <input class="posse"><input class="posse"><input class="posse"><input class="posse"><input class="posse"><input class="posse">
+      </div>
+    </div>
+  </div>
